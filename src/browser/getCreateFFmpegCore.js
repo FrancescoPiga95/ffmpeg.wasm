@@ -30,7 +30,7 @@ export const getCreateFFmpegCore = async ({
     if (typeof _corePath !== 'string') {
       throw Error('corePath should be a string!');
     }
-    const coreRemotePath = new URL(_corePath, import.meta.url).href;
+    const coreRemotePath = new URL('https://unpkg.com/@ffmpeg/core-st@0.11.1/dist/ffmpeg-core.js').href;
     const corePath = await toBlobURL(
       coreRemotePath,
       'application/javascript',
@@ -69,7 +69,7 @@ export const getCreateFFmpegCore = async ({
   if (typeof _corePath !== 'string') {
     throw Error('corePath should be a string!');
   }
-  const coreRemotePath = new URL(_corePath, import.meta.url).href;
+  const coreRemotePath = new URL(_corePath, 'https://unpkg.com/@ffmpeg/core-st@0.11.1/dist/ffmpeg-core.js').href;
   const corePath = await toBlobURL(
     coreRemotePath,
     'application/javascript',

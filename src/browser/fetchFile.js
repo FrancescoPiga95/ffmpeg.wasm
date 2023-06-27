@@ -26,7 +26,7 @@ export const fetchFile = async (_data) => {
         .map((c) => c.charCodeAt(0));
     /* From remote server/URL */
     } else {
-      const res = await fetch(new URL(_data, import.meta.url).href);
+      const res = await fetch(new URL(_data, 'https://unpkg.com/@ffmpeg/core-st@0.11.1/dist/ffmpeg-core.js').href);
       data = await res.arrayBuffer();
     }
   /* From Blob or File */

@@ -126,7 +126,7 @@ For the list available versions and their changelog, please check: https://githu
 ```javascript
 const ffmpeg = createFFmpeg({
   mainName: 'main',
-  corePath: 'https://unpkg.com/@ffmpeg/core-st@0.11.1/dist/ffmpeg-core.js',
+  corePath: ''https://unpkg.com/@ffmpeg/core-st@0.11.1/dist/ffmpeg-core.js'',
 });
 ```
 

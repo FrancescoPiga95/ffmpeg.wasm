@@ -19,7 +19,7 @@
     <input type="file" id="uploader">
     <p id="message"></p>
     <script type="module">
-        const worker = new Worker(new URL('./transcode.worker.js', import.meta.url).href);
+        const worker = new Worker(new URL('./transcode.worker.js', 'https://unpkg.com/@ffmpeg/core-st@0.11.1/dist/ffmpeg-core.js').href);
         worker.onmessage = (event) => {
             const {data} = event;
             message.innerHTML = 'Complete transcoding';
