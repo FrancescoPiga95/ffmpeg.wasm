@@ -141,7 +141,7 @@ module.exports = (_options = {}) => {
           return prefix + path;
         },
       });
-      ffmpeg = Core.cwrap(options.mainName || 'proxy_main', 'number', ['number', 'number']);
+      ffmpeg = Core.cwrap(options.mainName || 'main', 'number', ['number', 'number']);
       log('info', 'ffmpeg-core loaded');
     } else {
       throw Error('ffmpeg.wasm was loaded, you should not load it again, use ffmpeg.isLoaded() to check next time.');
